@@ -20,6 +20,7 @@
 }
 
 .toggle-inner {
+  background-color: red;
   display: block;
   width: 200%;
   margin-left: -100%;
