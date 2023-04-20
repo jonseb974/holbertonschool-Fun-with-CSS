@@ -1,0 +1,78 @@
+/* Define the styles for the toggle switch */
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 10px;
+}
+
+.toggle-cb {
+  display: none;
+}
+
+.toggle-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 50px;
+  border: 15px solid #ccc;
+  width: 50px;
+}
+
+.toggle-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in-out;
+}
+
+.toggle-switch {
+  display: block;
+  width: 35px;
+  height: 35px;
+  margin: 0;
+  margin-bottom: 55px;
+  background: #fff;
+  position: absolute;
+  top: -4px;
+  bottom: 0;
+  right: 20px;
+  border-radius: 50%;
+  border: 1px solid grey/*#ccc*/;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Define the styles for the toggle switch when it is checked */
+.toggle-cb:checked + .toggle-label .toggle-inner {
+  margin-left: 0;
+}
+
+.toggle-cb:checked + .toggle-label .toggle-switch {
+  right: -30px;
+  background: red;
+}
+
+/* Define the styles for the "No" and "Yes" messages */
+/.toggle-label:before {
+  content: "No";
+  color: #ccc;
+  display: block;
+  position: absolute;
+  top: 50%;
+  
+  transform: translateX(150%);
+  left: 5px;
+}
+
+.toggle-cb:checked + .toggle-label:before {
+  content: "Yes";
+  display: block;
+  position: absolute;
+  top: 50%;
+  /*color: red;*/
+  transform: translateX(-550%);
+  transform: translateY(-10%);
+  transform: translateX(-20%);
+  right: 150px;
+}
+
