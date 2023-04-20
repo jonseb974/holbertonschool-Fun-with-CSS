@@ -1,0 +1,72 @@
+
+
+
+/* Set the height of all unordered lists to be automatically calculated based on their contents */
+ul {
+    height: auto;
+}
+
+/* Set the height of all unordered lists and list items
+ to occupy 74% of the viewport height, and make them display as flex
+ containers with centered content */
+ul, li {
+    height: 50vh;
+    display: inline;
+    display: flex;
+    align-items: center;
+}
+
+/* Set the display property of all elements with the class "icon" to
+inline-block, and set their height and width to 100% */
+.icon {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+
+/* Set the background image of all elements with the class "i-html",
+"i-css", and "i-js" to be a sprite image located at '0-sprite.png',
+and set their background repeat property to "no-repeat", and width to 90% */
+.i-html, .i-css, .i-js {
+    background-image: url('0-sprite.png');
+    background-repeat: no-repeat;
+    width: 90%;
+}
+
+/* Set the horizontal position of the background image of all elements with the class "i-css" to be centered, and the position of the background image of all elements with the class "i-js" to be on the right */
+.i-css {
+    background-position-x: center;
+}
+.i-js {
+    background-position-x: right;
+}
+
+/* Set the flex direction of all list items to column, set the background color to #f7f7f7, set a 1 pixel solid border, set a border radius of 33 pixels, set the font weight to 600, set a margin of 0 pixels on the top and bottom and a 3% margin on the left and right, set a minimum width of 320 pixels, and set a padding of 15 pixels on the top */
+li {
+    font-size: 40px;
+    flex-direction: column;
+    background-color: #f7f7f7;
+    border: 1px solid;
+    border-radius: 15px;
+    font-weight: 600;
+    margin: 0px 3%;
+    min-width: 320px;
+    padding-top: 15px;
+}
+
+/* Set the color of the first list item to black */
+li:first-child {
+    color: black;
+}
+/* Set the color of the second list item to blueviolet */
+li:nth-child(2) {
+    color: black;
+}
+
+/* Set the color of the last list item to red */
+li:last-child {
+    color: black;
+}
+
+
+
