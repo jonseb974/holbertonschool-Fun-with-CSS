@@ -1,79 +1,70 @@
-/* Define the styles for the toggle switch */
-.toggle {
+/* The following CSS rule sets the opacity of all input elements to 0 */
+input {
+  opacity: 0;
+  }
+  
+  /* The following CSS rule styles a toggle container */
+  .toggle {
+  margin: 50px ;
+  width: 100px;
+  height: 40px;
   position: relative;
   display: inline-block;
-  width: 50px;
-  height: 10px;
-}
-
-.toggle-cb {
-  display: none;
-}
-
-.toggle-label {
-  display: block;
-  overflow: hidden;
-  cursor: pointer;
-  border-radius: 50px;
-  border: 15px solid #ccc;
-  width: 50px;
-}
-
-.toggle-inner {
-  background-color: red;
-  display: block;
-  width: 200%;
-  margin-left: -100%;
-  transition: margin 0.3s ease-in-out;
-}
-
-.toggle-switch {
-  display: block;
-  width: 35px;
-  height: 35px;
-  margin: 0;
-  margin-bottom: 55px;
-  background: #fff;
+  }
+  
+  /* The following CSS rule styles the inner part of the toggle container */
+  .toggle-inner {
+  background-color: rgb(253, 0, 0);
   position: absolute;
-  top: -4px;
+  top: 0;
+  left: 0;
+  right: 0;
   bottom: 0;
-  right: 20px;
-  border-radius: 50%;
-  border: 1px solid grey/*#ccc*/;
-  transition: all 0.3s ease-in-out;
-}
-
-/* Define the styles for the toggle switch when it is checked */
-.toggle-cb:checked + .toggle-label .toggle-inner {
-  margin-left: 0;
-}
-
-.toggle-cb:checked + .toggle-label .toggle-switch {
-  right: -30px;
-  background: red;
-}
-
-/* Define the styles for the "No" and "Yes" messages */
-.toggle-label:before {
-  content: "No";
-  color: #A3A3A3;
-  display: block;
-  position: absolute;
-  top: 50%;  
-  transform: translateX(150%);
-  left: 5px;
-}
-
-.toggle-cb:checked + .toggle-label:before {
-  content: "Yes";
-  display: block;
-  position: absolute;
-  top: 50%;
+  border-radius: 30px;
+  border: solid 1px rgb(152, 151, 151);
+  transition: background-color 0.25s ease-in ;
+  padding: 4px 10px;
+  font-size: 20px;
+  font-size: 25px;
+  font-family: sans-serif;
   color: white;
-  background-color: red;
-  transform: translateX(-550%);
-  transform: translateY(-10%);
-  transform: translateX(-20%);
-  right: 150px;
-}
-
+  }
+  
+  /* The following CSS rule adds content to the inner part of the toggle container */
+  .toggle-inner::before {
+  content: "Yes";
+  opacity: 1;
+  }
+  
+  /* The following CSS rule styles the switch button of the toggle */
+  .toggle-switch {
+  background-color: rgb(255, 255, 255);
+  border: solid 1px rgb(152, 151, 151);
+  position: absolute;
+  top: -5px;
+  left: 75px;
+  border-radius: 40px;
+  right: -25px;
+  bottom: -5px;
+  transition: translate 0.25s ease-in ;
+  }
+  
+  /* The following CSS rule moves the toggle switch button to the left and changes its background color when the input is checked */
+  input:checked + .toggle-label .toggle-switch {
+  translate: -100px;
+  transition: translate 0.25s ease-in ;
+  }
+  
+  /* The following CSS rule changes the background color of the toggle inner part when the input is checked */
+  input:checked + .toggle-label .toggle-inner {
+  background-color: rgb(178, 178, 178);
+  transition: background-color 0.25s ease-in ;
+  }
+  
+  /* The following CSS rule changes the content and position of the toggle inner part content when the input is checked */
+  input:checked + .toggle-label .toggle-inner::before {
+  content: "No";
+  left: 55px;
+  position: absolute;
+  color: rgb(228, 228, 228);
+  }
